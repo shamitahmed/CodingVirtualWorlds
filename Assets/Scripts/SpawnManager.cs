@@ -19,7 +19,7 @@ public class SpawnManager : MonoBehaviour
     private void Update()
     {
         spawnDelay += Time.deltaTime;
-        if(spawnDelay >= 2 )
+        if(spawnDelay >= 1.5f )
         {
             GameObject go = Instantiate(ballPrefab, new Vector3(spawnPosX[Random.Range(0,spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
             spawnCount++;
