@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject ballPrefab;
+    public GameObject[] ballPrefab;
     public float spawnDelay;
     public int spawnCount;
     public float[] spawnPosX;
@@ -19,9 +19,9 @@ public class SpawnManager : MonoBehaviour
     private void Update()
     {
         spawnDelay += Time.deltaTime;
-        if(spawnDelay >= 1.5f )
+        if(spawnDelay >= 1f )
         {
-            GameObject go = Instantiate(ballPrefab, new Vector3(spawnPosX[Random.Range(0,spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
+            GameObject go = Instantiate(ballPrefab[Random.Range(0, ballPrefab.Length)], new Vector3(spawnPosX[Random.Range(0,spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
             spawnCount++;
             spawnDelay = 0;
         }
