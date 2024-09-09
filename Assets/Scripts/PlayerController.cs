@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,6 +34,14 @@ public class PlayerController : MonoBehaviour
         float roll = Mathf.Lerp(0, 30, Mathf.Abs(horInput)) * -Mathf.Sign(horInput);
 
         transform.localRotation = Quaternion.Euler(0,0,roll);
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("ball"))
+        {
+            transform.DOMoveY(transform.position.y + 2f, 0.2f).SetLoops(2, LoopType.Yoyo);
+            //transform.DOMoveZ(transform.position.z - 0.5f, 0.2f).SetLoops(2, LoopType.Yoyo);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

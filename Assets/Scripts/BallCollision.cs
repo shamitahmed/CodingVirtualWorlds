@@ -16,7 +16,7 @@ public class BallCollision : MonoBehaviour
         {
             GameObject fx = Instantiate(blastFX,transform.position, blastFX.transform.rotation);
             Destroy(fx, 2f);
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 }
