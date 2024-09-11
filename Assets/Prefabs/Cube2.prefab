@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7278925263788f34f9afa90565100ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 10
 --- !u!1001 &2425570070416683627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 14f9023b901aa544aa847d5ba0b1471a, type: 2}
+      objectReference: {fileID: 2100000, guid: 96b369f849857134e899269d0b2d4ea0, type: 2}
     - target: {fileID: -5754084199372789682, guid: 6d2dddbde8ad9bc47b115322e4648b08,
         type: 3}
       propertyPath: m_Mesh

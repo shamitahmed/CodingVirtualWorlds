@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+
 
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] ballPrefab;
-    public float spawnDelay;
-    public float spawnInterval=1f;
+    public float timer;
+    public float spawnInterval= (60/105)*2f;
     public int spawnCount;
     public float[] spawnPosX;
     public float spawnPosZ;
@@ -19,14 +21,15 @@ public class SpawnManager : MonoBehaviour
 
     private void Update()
     {
-        spawnDelay += Time.deltaTime;
-        if(spawnDelay >= spawnInterval )
+        if(timer >= spawnInterval)
         {
             GameObject go = Instantiate(ballPrefab[Random.Range(0, ballPrefab.Length)], new Vector3(spawnPosX[Random.Range(0,spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
+            go.transform.DOScale(go.transform.localScale * 2f, 0.2f).SetLoops(2, LoopType.Yoyo);
             //SoundManager.instance.audioSource.clip = SoundManager.instance.spawnBall;
             //SoundManager.instance.audioSource.Play();
             spawnCount++;
-            spawnDelay = 0;
+            timer -= spawnInterval;
         }
+        timer += Time.deltaTime;
     }
 }
