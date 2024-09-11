@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ball"))
         {
+            SoundManager.instance.audioSource.clip = SoundManager.instance.hitBall;
+            SoundManager.instance.audioSource.Play();
             transform.DOMoveY(transform.position.y + 2f, 0.2f).SetLoops(2, LoopType.Yoyo);
             //transform.DOMoveZ(transform.position.z - 0.5f, 0.2f).SetLoops(2, LoopType.Yoyo);
         }

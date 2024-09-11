@@ -22,6 +22,8 @@ public class SpawnManager : MonoBehaviour
         if(spawnDelay >= 1f )
         {
             GameObject go = Instantiate(ballPrefab[Random.Range(0, ballPrefab.Length)], new Vector3(spawnPosX[Random.Range(0,spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
+            //SoundManager.instance.audioSource.clip = SoundManager.instance.spawnBall;
+            //SoundManager.instance.audioSource.Play();
             spawnCount++;
             spawnDelay = 0;
         }
