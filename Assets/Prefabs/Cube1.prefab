@@ -142,7 +142,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6d2dddbde8ad9bc47b115322e4648b08,
         type: 3}
       propertyPath: m_TagString
-      value: ball
+      value: cube
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -231,6 +231,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blastFX: {fileID: 5005040979668424965, guid: 3b5b1070b403da24b9498ed4f1891b27, type: 3}
+  isCube: 1
+  cubeID: 1
 --- !u!65 &159592883825407976
 BoxCollider:
   m_ObjectHideFlags: 0

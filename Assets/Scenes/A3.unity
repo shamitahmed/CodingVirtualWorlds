@@ -18,8 +18,8 @@ RenderSettings:
   m_FogColor: {r: 0.12549019, g: 0.69474274, b: 1, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
-  m_LinearFogStart: 13.39
-  m_LinearFogEnd: 115.6
+  m_LinearFogStart: 11.25
+  m_LinearFogEnd: 94.3
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -479,6 +479,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaberL
       objectReference: {fileID: 0}
+    - target: {fileID: 8876389733232061922, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: isLeftSaber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876389733232061922, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 824915341}
+    - target: {fileID: 8876389733232061922, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 2080928761}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -654,6 +669,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6173254090352702114, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: isRightSaber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6173254090352702114, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 824915341}
+    - target: {fileID: 6173254090352702114, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 2080928761}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3779,6 +3809,7 @@ GameObject:
   - component: {fileID: 2373428148120489631}
   - component: {fileID: 7837048761898367616}
   - component: {fileID: 669413040}
+  - component: {fileID: 7837048761898367617}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -3916,6 +3947,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7837048761898367617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127430166025888155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfbac3c38b8a39448366e23478a9d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: -0.1
 --- !u!1 &8883021551219795461
 GameObject:
   m_ObjectHideFlags: 0

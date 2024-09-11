@@ -7,6 +7,7 @@ TagManager:
   - blade
   - danger
   - ball
+  - cube
   layers:
   - Default
   - TransparentFX

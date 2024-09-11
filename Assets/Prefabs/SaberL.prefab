@@ -211,6 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 788489941524640792}
+  - component: {fileID: 8876389733232061922}
   m_Layer: 0
   m_Name: SaberL
   m_TagString: Untagged
@@ -236,6 +237,18 @@ Transform:
   - {fileID: 3327778964902026832}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8876389733232061922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2894141729649234234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdcb03fe8a96cd43ad2bd0c4bf1216a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7002463272271944544
 GameObject:
   m_ObjectHideFlags: 0
