@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] ballPrefab;
     public float spawnDelay;
+    public float spawnInterval=1f;
     public int spawnCount;
     public float[] spawnPosX;
     public float spawnPosZ;
@@ -19,7 +20,7 @@ public class SpawnManager : MonoBehaviour
     private void Update()
     {
         spawnDelay += Time.deltaTime;
-        if(spawnDelay >= 1f )
+        if(spawnDelay >= spawnInterval )
         {
             GameObject go = Instantiate(ballPrefab[Random.Range(0, ballPrefab.Length)], new Vector3(spawnPosX[Random.Range(0,spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
             //SoundManager.instance.audioSource.clip = SoundManager.instance.spawnBall;
