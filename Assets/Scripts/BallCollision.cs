@@ -18,8 +18,9 @@ public class BallCollision : MonoBehaviour
         {
             //miss + destroy
 
-            GameObject fx = Instantiate(blastFX,transform.position, blastFX.transform.rotation);
-            Destroy(fx, 2f);
+            //GameObject fx = Instantiate(blastFX,transform.position, blastFX.transform.rotation);
+            //Destroy(fx, 2f);
+
             //SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
             //SoundManager.instance.audioSource.Play();
             Destroy(transform.parent.gameObject);

@@ -424,6 +424,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 824915336}
     m_Modifications:
+    - target: {fileID: 21563904223185805, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 788489941524640792, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 788489941524640792, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 788489941524640792, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 788489941524640792, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,26 +494,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2487719559047105742, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: blastFX
+      value: 
+      objectReference: {fileID: 5005040979668424965, guid: eb25a0e1b7d69594f8464c42bbf24dfa,
+        type: 3}
+    - target: {fileID: 2487719559047105742, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: leftController
+      value: 
+      objectReference: {fileID: 824915341}
+    - target: {fileID: 2487719559047105742, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: rightController
+      value: 
+      objectReference: {fileID: 2080928761}
     - target: {fileID: 2894141729649234234, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
         type: 3}
       propertyPath: m_Name
       value: SaberL
       objectReference: {fileID: 0}
-    - target: {fileID: 8876389733232061922, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+    - target: {fileID: 2894141729649234234, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
         type: 3}
-      propertyPath: isLeftSaber
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8876389733232061922, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+    - target: {fileID: 7002463272271944544, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
         type: 3}
-      propertyPath: leftController
-      value: 
-      objectReference: {fileID: 824915341}
-    - target: {fileID: 8876389733232061922, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
-        type: 3}
-      propertyPath: rightController
-      value: 
-      objectReference: {fileID: 2080928761}
+      propertyPath: m_TagString
+      value: saber
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -621,6 +652,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4686921348262185223, guid: 7a8f00d011a8c2e498662c0c8334139f,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686921348262185223, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686921348262185223, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686921348262185223, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -669,6 +715,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6007947621147894059, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: m_TagString
+      value: saber
+      objectReference: {fileID: 0}
     - target: {fileID: 6173254090352702114, guid: 7a8f00d011a8c2e498662c0c8334139f,
         type: 3}
       propertyPath: isRightSaber
@@ -684,10 +735,20 @@ PrefabInstance:
       propertyPath: rightController
       value: 
       objectReference: {fileID: 2080928761}
-    m_RemovedComponents: []
+    - target: {fileID: 8025264568590355684, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6173254090352702114, guid: 7a8f00d011a8c2e498662c0c8334139f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6007947621147894059, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1573653217}
   m_SourcePrefab: {fileID: 100100000, guid: 7a8f00d011a8c2e498662c0c8334139f, type: 3}
 --- !u!4 &372359995 stripped
 Transform:
@@ -3007,6 +3068,32 @@ Transform:
   - {fileID: 2080928756}
   m_Father: {fileID: 10655618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1573653212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6007947621147894059, guid: 7a8f00d011a8c2e498662c0c8334139f,
+    type: 3}
+  m_PrefabInstance: {fileID: 372359994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1573653217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573653212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bdcb03fe8a96cd43ad2bd0c4bf1216a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLeftSaber: 0
+  isRightSaber: 1
+  saberColliding: 0
+  blastFX: {fileID: 5005040979668424965, guid: 3b5b1070b403da24b9498ed4f1891b27, type: 3}
+  leftController: {fileID: 824915341}
+  rightController: {fileID: 2080928761}
+  strength: 0.2
+  duration: 0.2
 --- !u!1 &1575703513
 GameObject:
   m_ObjectHideFlags: 0

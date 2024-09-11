@@ -8,6 +8,7 @@ TagManager:
   - danger
   - ball
   - cube
+  - saber
   layers:
   - Default
   - TransparentFX

@@ -10,9 +10,12 @@ public class Saber : MonoBehaviour
     public bool isLeftSaber;
     public bool isRightSaber;
     public bool saberColliding;
+    public GameObject blastFX;
     [Header("haptic")]
     [SerializeField] private XRBaseController leftController;
     [SerializeField] private XRBaseController rightController;
+    public float strength = 0.2f;
+    public float duration = 0.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,25 +28,31 @@ public class Saber : MonoBehaviour
         {
             if (isLeftSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 0)
             {
-                SoundManager.instance.audioSource.clip = SoundManager.instance.hitBall;
+                SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
                 SoundManager.instance.audioSource.Play();
-                LeftControllerVibration(0.1f, 0.1f);
+                LeftControllerVibration(strength,duration);
+                GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
+                Destroy(fx, 2f);
+
                 Destroy(other.gameObject.transform.parent.gameObject);
             }
 
             if (isRightSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 1)
             {
-                SoundManager.instance.audioSource.clip = SoundManager.instance.hitBall;
+                SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
                 SoundManager.instance.audioSource.Play();
-                RightControllerVibration(0.1f, 0.1f);
+                RightControllerVibration(strength,duration);
+                GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
+                Destroy(fx, 2f);
+
                 Destroy(other.gameObject.transform.parent.gameObject);
             }
         }
-        if (other.gameObject.CompareTag("saber"))
+        if (other.gameObject.CompareTag("saber") && !saberColliding)
         {
             saberColliding = true;
-            LeftControllerVibration(0.1f, 0.1f);
-            RightControllerVibration(0.1f, 0.1f);
+            LeftControllerVibration(strength/2, duration/2);
+            RightControllerVibration(strength/2, duration/2);
         }
     }
     private void OnCollisionExit(Collision other)
