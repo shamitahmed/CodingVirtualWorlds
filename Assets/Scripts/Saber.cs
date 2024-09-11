@@ -36,8 +36,7 @@ public class Saber : MonoBehaviour
 
                 Destroy(other.gameObject.transform.parent.gameObject);
             }
-
-            if (isRightSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 1)
+            else if (isRightSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 1)
             {
                 SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
                 SoundManager.instance.audioSource.Play();
@@ -47,12 +46,16 @@ public class Saber : MonoBehaviour
 
                 Destroy(other.gameObject.transform.parent.gameObject);
             }
+            else
+            {
+
+            }
         }
         if (other.gameObject.CompareTag("saber") && !saberColliding)
         {
-            saberColliding = true;
             LeftControllerVibration(strength/2, duration/2);
             RightControllerVibration(strength/2, duration/2);
+            saberColliding = true;
         }
     }
     private void OnCollisionExit(Collision other)
