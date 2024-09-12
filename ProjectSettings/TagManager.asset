@@ -9,6 +9,7 @@ TagManager:
   - ball
   - cube
   - saber
+  - bomb
   layers:
   - Default
   - TransparentFX

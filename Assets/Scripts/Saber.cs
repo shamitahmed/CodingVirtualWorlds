@@ -26,7 +26,7 @@ public class Saber : MonoBehaviour
     {
         if (other.gameObject.CompareTag("cube"))
         {
-            if (isLeftSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 0)
+            if (isLeftSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 0)//OK LEFT or BLUE
             {
                 SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
                 SoundManager.instance.audioSource.Play();
@@ -34,9 +34,11 @@ public class Saber : MonoBehaviour
                 GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
                 Destroy(fx, 2f);
 
+                ScoreManager.instance.IncreaseScore(10);
+                ScoreManager.instance.IncreaseCombo();
                 Destroy(other.gameObject.transform.parent.gameObject);
             }
-            else if (isRightSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 1)
+            else if (isRightSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 1)//OK RIGHT or RED
             {
                 SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
                 SoundManager.instance.audioSource.Play();
@@ -44,11 +46,19 @@ public class Saber : MonoBehaviour
                 GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
                 Destroy(fx, 2f);
 
+                ScoreManager.instance.IncreaseScore(10);
+                ScoreManager.instance.IncreaseCombo();
                 Destroy(other.gameObject.transform.parent.gameObject);
             }
-            else
+            else if (isLeftSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 1)//Wrong LEFT
             {
-
+                //UI + particle + haptic + audio feedback
+                ScoreManager.instance.ResetCombo();
+            }
+            else if (isRightSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 0)//Wrong RIGHT
+            {
+                //UI + particle + haptic + audio feedback
+                ScoreManager.instance.ResetCombo();
             }
         }
         if (other.gameObject.CompareTag("saber") && !saberColliding)
@@ -56,6 +66,16 @@ public class Saber : MonoBehaviour
             LeftControllerVibration(strength/2, duration/2);
             RightControllerVibration(strength/2, duration/2);
             saberColliding = true;
+        }
+        if (other.gameObject.CompareTag("bomb"))
+        {
+            //blast FX
+
+            LeftControllerVibration(strength*2, duration);
+            RightControllerVibration(strength*2, duration);
+            ScoreManager.instance.ResetCombo();
+
+            Destroy(other.gameObject.transform.parent.gameObject);
         }
     }
     private void OnCollisionExit(Collision other)
