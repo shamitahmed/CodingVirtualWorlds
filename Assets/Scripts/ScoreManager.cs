@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         instance = this;
+        ResetScore();
+        ResetCombo();
     }
     public void IncreaseScore(int score)
     {
@@ -23,9 +26,14 @@ public class ScoreManager : MonoBehaviour
         comboCount++;
         UIManager.Instance.txtCombo.text = "Score: " + comboCount.ToString();
     }
+    public void ResetScore()
+    {
+        scoreCount = 0;
+        UIManager.Instance.txtScore.text = "Score: " + scoreCount.ToString();
+    }
     public void ResetCombo()
     {
         comboCount = 0;
-        UIManager.Instance.txtCombo.text = "Combo: " + comboCount;
+        UIManager.Instance.txtCombo.text = "Combo: " + comboCount.ToString();
     }
 }
