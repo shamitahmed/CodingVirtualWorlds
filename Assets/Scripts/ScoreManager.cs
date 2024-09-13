@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     public void IncreaseCombo()
     {
         comboCount++;
-        UIManager.Instance.txtCombo.text = "Score: " + comboCount.ToString();
+        UIManager.Instance.txtCombo.text = "Combo: " + comboCount.ToString();
     }
     public void ResetScore()
     {

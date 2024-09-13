@@ -63,8 +63,8 @@ public class Saber : MonoBehaviour
         }
         if (other.gameObject.CompareTag("saber") && !saberColliding)
         {
-            LeftControllerVibration(strength/2, duration/2);
-            RightControllerVibration(strength/2, duration/2);
+            LeftControllerVibration(strength, duration/2);
+            RightControllerVibration(strength, duration/2);
             saberColliding = true;
         }
         if (other.gameObject.CompareTag("bomb"))
