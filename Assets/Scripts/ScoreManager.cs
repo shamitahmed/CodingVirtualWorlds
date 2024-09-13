@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using DG.Tweening;
+
 
 public class ScoreManager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class ScoreManager : MonoBehaviour
     {
         scoreCount += score;
         UIManager.Instance.txtScore.text = "Score: " + scoreCount.ToString();
+        UIManager.Instance.txtScore.rectTransform.DOScale(new Vector3(1.2f,1.2f,1.2f),0.25f).SetLoops(2,LoopType.Yoyo);
     }
     public void IncreaseCombo()
     {

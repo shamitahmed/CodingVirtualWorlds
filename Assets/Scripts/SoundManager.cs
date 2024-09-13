@@ -10,7 +10,8 @@ public class SoundManager : MonoBehaviour
     public AudioClip hitBall;
     public AudioClip breakBall;
     public AudioClip spawnBall;
-
+    public AudioClip wrong;
+    public AudioClip bomb;
 
     // Start is called before the first frame update
     void Start()
