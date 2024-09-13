@@ -523,6 +523,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1818948047495532699, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.10640597
+      objectReference: {fileID: 0}
+    - target: {fileID: 1818948047495532699, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2487719559047105742, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
         type: 3}
       propertyPath: leftController
@@ -791,6 +801,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SaberR
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327889227668045928, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.7977679
       objectReference: {fileID: 0}
     - target: {fileID: 4686921348262185223, guid: 7a8f00d011a8c2e498662c0c8334139f,
         type: 3}
@@ -3815,6 +3830,8 @@ MonoBehaviour:
   spawnPosX:
   - -1.5
   spawnPosZ: 30
+  initDelay: 0
+  canSpawn: 0
 --- !u!1 &1908273304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3869,8 @@ MonoBehaviour:
   spawnPosX:
   - 2
   spawnPosZ: 30
+  initDelay: 0
+  canSpawn: 0
 --- !u!4 &1908273306
 Transform:
   m_ObjectHideFlags: 0

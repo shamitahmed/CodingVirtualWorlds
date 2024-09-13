@@ -13,16 +13,19 @@ public class SpawnManager : MonoBehaviour
     public float[] spawnPosX;
     public float spawnPosZ;
     public float initDelay;
+    public bool canSpawn;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(InitDelay());
     }
 
     private void Update()
     {
-        Spawn();
+        if(canSpawn)
+            Spawn();
     }
     public void Spawn()
     {
@@ -34,5 +37,10 @@ public class SpawnManager : MonoBehaviour
             timer -= spawnInterval;
         }
         timer += Time.deltaTime;
+    }
+    public IEnumerator InitDelay()
+    {
+        yield return new WaitForSeconds(1f);
+        canSpawn = true;
     }
 }
