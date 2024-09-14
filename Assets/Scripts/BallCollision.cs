@@ -7,11 +7,7 @@ public class BallCollision : MonoBehaviour
     public GameObject blastFX;
     public bool isCube;
     public int cubeID;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("blade"))

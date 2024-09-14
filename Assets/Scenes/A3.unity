@@ -1099,6 +1099,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotation: {x: 0, y: 5, z: 0}
   space: 1
+--- !u!1 &585475980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 585475981}
+  - component: {fileID: 585475982}
+  m_Layer: 0
+  m_Name: SpawnSwapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &585475981
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585475980}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &585475982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585475980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0056f14b7175b0b43a5fc1047e7f9a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerL: {fileID: 1882018183}
+  spawnerR: {fileID: 1908273305}
+  lastL: {fileID: 0}
+  lastR: {fileID: 0}
+  canSwap: 0
+  swapTimer: 0
 --- !u!1 &606681837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,6 +4012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb705821cfd77f43a53be6880c04061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLeft: 1
   ballPrefab:
   - {fileID: 6205131667412071021, guid: 03b50e7293cef20459b9d9c463b8a2ba, type: 3}
   timer: 0
@@ -4001,6 +4052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deb705821cfd77f43a53be6880c04061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLeft: 0
   ballPrefab:
   - {fileID: 6205131667412071021, guid: 73cfb9d62711d3442bbdfa3e90b77428, type: 3}
   timer: 0
@@ -5015,6 +5067,7 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1882018182}
   - {fileID: 1908273306}
+  - {fileID: 585475981}
   - {fileID: 26525529}
   - {fileID: 114219809}
   - {fileID: 2107164495}

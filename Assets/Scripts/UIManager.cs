@@ -21,10 +21,6 @@ public class UIManager : MonoBehaviour
     {
         Instance = this;   
     }
-    private void Update()
-    {
-        //HardMissedOff();
-    }
     void HardMissedOff()
     {
         if (isMissedShowing)
