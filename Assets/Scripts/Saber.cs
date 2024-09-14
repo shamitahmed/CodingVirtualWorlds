@@ -26,6 +26,7 @@ public class Saber : MonoBehaviour
     {
         if (other.gameObject.CompareTag("cube"))
         {
+            //Debug.Log(GetComponent<Rigidbody>().velocity.x.ToString() + " , " + GetComponent<Rigidbody>().velocity.y.ToString());
             if (isLeftSaber && other.gameObject.GetComponent<BallCollision>().cubeID == 0)//OK LEFT or BLUE
             {
                 SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
