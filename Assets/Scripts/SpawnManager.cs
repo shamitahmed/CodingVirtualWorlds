@@ -33,6 +33,7 @@ public class SpawnManager : MonoBehaviour
         {
             GameObject go = Instantiate(ballPrefab[Random.Range(0, ballPrefab.Length)], new Vector3(spawnPosX[Random.Range(0, spawnPosX.Length)], 1, spawnPosZ), Quaternion.identity);
             go.transform.DOScale(go.transform.localScale * 2f, 0.2f).SetLoops(2, LoopType.Yoyo);
+            go.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
             spawnCount++;
             timer -= spawnInterval;
         }
