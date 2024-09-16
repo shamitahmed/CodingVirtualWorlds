@@ -7,6 +7,7 @@ public class BallCollision : MonoBehaviour
     public GameObject blastFX;
     public bool isCube;
     public int cubeID;
+    public int directionID;
 
     private void OnTriggerEnter(Collider other)
     {

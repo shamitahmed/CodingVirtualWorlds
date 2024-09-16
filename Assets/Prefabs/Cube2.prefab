@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7278925263788f34f9afa90565100ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 9
 --- !u!1001 &2425570070416683627
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ MonoBehaviour:
   blastFX: {fileID: 5005040979668424965, guid: eb25a0e1b7d69594f8464c42bbf24dfa, type: 3}
   isCube: 1
   cubeID: 0
+  directionID: 0
 --- !u!65 &159592883825407976
 BoxCollider:
   m_ObjectHideFlags: 0

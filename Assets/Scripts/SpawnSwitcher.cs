@@ -18,7 +18,7 @@ public class SpawnSwitcher : MonoBehaviour
     void Start()
     {
         instance = this;
-        randSwapDistance = Random.Range(3, 6);
+        randSwapDistance = Random.Range(3,7);
     }
     private void Update()
     {
@@ -33,12 +33,30 @@ public class SpawnSwitcher : MonoBehaviour
     }
     public void SwapColors()
     {
-        if(lastL != null && lastR != null)
+        if(lastL != null && lastR != null && !spawnerL.skipped && !spawnerR.skipped)
         {
             lastL.transform.DOMoveX(lastR.transform.position.x, 1f);
             lastR.transform.DOMoveX(lastL.transform.position.x, 1f);
         }
-        randSwapDistance = Random.Range(3, 6);
+
+
+        //handle situation when spawner skips a spawn
+        //1. detect 2. move only 1 instead of both
+
+        if (spawnerL.skipped)
+        {
+            lastR.transform.DOMoveX(-1.65f, 1f);
+        }
+        else if (spawnerR.skipped)
+        {
+            lastL.transform.DOMoveX(2f, 1f);
+        }
+        else if(spawnerL.skipped && spawnerR.skipped)
+        {
+            //do nothing, skip!
+        }
+
+        randSwapDistance = Random.Range(3,7);
         canSwap = false;
     }
 }

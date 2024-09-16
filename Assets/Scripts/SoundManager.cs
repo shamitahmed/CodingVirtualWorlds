@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
     public AudioSource audioSource;
+    public AudioSource musicSource;
     public GameObject audioSpectrum;
     public AudioClip hitBall;
     public AudioClip breakBall;
@@ -19,6 +20,7 @@ public class SoundManager : MonoBehaviour
         instance = this;
         audioSource = GetComponent<AudioSource>();
         audioSpectrum.transform.localScale = new Vector3(4,6,4);
+        Debug.Log(musicSource.clip.length);
     }
 
 }

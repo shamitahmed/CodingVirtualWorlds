@@ -21,27 +21,25 @@ public class UIManager : MonoBehaviour
     {
         Instance = this;   
     }
+    private void Update()
+    {
+        HardMissedOff();
+    }
     void HardMissedOff()
     {
-        if (isMissedShowing)
-        {
             missedShowTime += Time.deltaTime;
             if (missedShowTime >= 0.5f)
             {
                 txtMissed.gameObject.SetActive(false);
                 missedShowTime = 0f;
             }
-        }
     }
     public IEnumerator MissedUIRoutine()
     {
-        if(!isMissedShowing)
-        {
-            txtMissed.gameObject.SetActive(true);
-            isMissedShowing = true;
-            yield return new WaitForSeconds(0.2f);
-            txtMissed.gameObject.SetActive(false);
-            isMissedShowing = false;
-        }
+        txtMissed.gameObject.SetActive(true);
+        missedShowTime = 0f;
+        yield return new WaitForSeconds(0.2f);
+        txtMissed.gameObject.SetActive(false);
+        
     }
 }
