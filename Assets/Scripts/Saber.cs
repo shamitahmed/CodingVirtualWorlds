@@ -13,6 +13,7 @@ public class Saber : MonoBehaviour
     public bool saberColliding;
     public GameObject blastFX;
     public GameObject bombFX;
+    public ParticleSystem sparkFX;
     [Header("slice")]
     public Transform startSlicePoint;
     public Transform endSlicePoint;
@@ -60,6 +61,7 @@ public class Saber : MonoBehaviour
                     LeftControllerVibration(strength, duration);
                     GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
                     Destroy(fx, 2f);
+                    sparkFX.Play();
 
                     ScoreManager.instance.IncreaseScore(20);
                     ScoreManager.instance.IncreaseCombo();
@@ -74,6 +76,7 @@ public class Saber : MonoBehaviour
                     RightControllerVibration(strength, duration);
                     GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
                     Destroy(fx, 2f);
+                    sparkFX.Play();
 
                     ScoreManager.instance.IncreaseScore(20);
                     ScoreManager.instance.IncreaseCombo();
@@ -90,6 +93,7 @@ public class Saber : MonoBehaviour
                 LeftControllerVibration(strength, duration);
                 GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
                 Destroy(fx, 2f);
+                sparkFX.Play();
                 Slice(other.gameObject);
                 Destroy(other.gameObject);
             }
@@ -103,6 +107,7 @@ public class Saber : MonoBehaviour
                 RightControllerVibration(strength, duration);
                 GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
                 Destroy(fx, 2f);
+                sparkFX.Play();
                 Slice(other.gameObject);
                 Destroy(other.gameObject);
             }
@@ -111,6 +116,7 @@ public class Saber : MonoBehaviour
         {
             LeftControllerVibration(strength, duration / 2);
             RightControllerVibration(strength, duration / 2);
+            sparkFX.Play();
             saberColliding = true;
         }
         if (other.gameObject.CompareTag("bomb"))
@@ -118,6 +124,7 @@ public class Saber : MonoBehaviour
             //blast FX
             GameObject fx = Instantiate(bombFX, other.transform.position, bombFX.transform.rotation);
             Destroy(fx, 2f);
+            sparkFX.Play();
             SoundManager.instance.audioSource.clip = SoundManager.instance.bomb;
             SoundManager.instance.audioSource.Play();
             LeftControllerVibration(strength * 2, duration);
