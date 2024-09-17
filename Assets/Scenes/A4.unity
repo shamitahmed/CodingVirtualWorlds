@@ -321,7 +321,8 @@ MonoBehaviour:
   breakBall: {fileID: 8300000, guid: ce60fa41f36424a479b76cc931fe1a53, type: 3}
   spawnBall: {fileID: 8300000, guid: 9120bf8f609233c48a6530bd5900f282, type: 3}
   wrong: {fileID: 8300000, guid: 499d04ccdd8bd2f45ab861c07f75ba4a, type: 3}
-  bomb: {fileID: 0}
+  right: {fileID: 8300000, guid: 8a23dcaf77508984d953fdd0176779a8, type: 3}
+  bomb: {fileID: 8300000, guid: e066b5adf51087f4aa7a2737a7c9cd53, type: 3}
 --- !u!1 &61094717
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +554,12 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.key1.g
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2487719559047105742, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
+        type: 3}
+      propertyPath: bombFX
+      value: 
+      objectReference: {fileID: 8614053767375523194, guid: 8f3891993f664eb4f9dc31a0c9aba738,
+        type: 3}
     - target: {fileID: 2487719559047105742, guid: d4b1d6f29180f0941a578b4a1c5a63f0,
         type: 3}
       propertyPath: leftController
@@ -898,6 +905,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5284416680635734682, guid: 7a8f00d011a8c2e498662c0c8334139f,
+        type: 3}
+      propertyPath: bombFX
+      value: 
+      objectReference: {fileID: 8614053767375523194, guid: 8f3891993f664eb4f9dc31a0c9aba738,
+        type: 3}
     - target: {fileID: 5284416680635734682, guid: 7a8f00d011a8c2e498662c0c8334139f,
         type: 3}
       propertyPath: leftController

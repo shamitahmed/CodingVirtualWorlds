@@ -1391,7 +1391,7 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.5832002, b: 0, a: 1}
+        key0: {r: 1, g: 0.89930767, b: 0, a: 1}
         key1: {r: 1, g: 0.9083816, b: 0, a: 1}
         key2: {r: 1, g: 0.99956155, b: 0, a: 1}
         key3: {r: 1, g: 0, b: 0, a: 0}
@@ -4956,6 +4956,7 @@ MonoBehaviour:
   blastFX: {fileID: 5005040979668424965, guid: eb25a0e1b7d69594f8464c42bbf24dfa, type: 3}
   isCube: 1
   cubeID: 0
+  directionID: 0
 --- !u!65 &5359604472930827633
 BoxCollider:
   m_ObjectHideFlags: 0

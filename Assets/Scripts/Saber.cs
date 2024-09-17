@@ -11,6 +11,7 @@ public class Saber : MonoBehaviour
     public bool isRightSaber;
     public bool saberColliding;
     public GameObject blastFX;
+    public GameObject bombFX;
     [Header("haptic")]
     [SerializeField] private XRBaseController leftController;
     [SerializeField] private XRBaseController rightController;
@@ -55,7 +56,7 @@ public class Saber : MonoBehaviour
             {
                 if(hitDirection == other.gameObject.GetComponent<BallCollision>().directionID)
                 {
-                    SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
+                    SoundManager.instance.audioSource.clip = SoundManager.instance.right;
                     SoundManager.instance.audioSource.Play();
                     LeftControllerVibration(strength, duration);
                     GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
@@ -85,7 +86,7 @@ public class Saber : MonoBehaviour
             {
                 if (hitDirection == other.gameObject.GetComponent<BallCollision>().directionID)
                 {
-                    SoundManager.instance.audioSource.clip = SoundManager.instance.breakBall;
+                    SoundManager.instance.audioSource.clip = SoundManager.instance.right;
                     SoundManager.instance.audioSource.Play();
                     RightControllerVibration(strength, duration);
                     GameObject fx = Instantiate(blastFX, other.transform.position, blastFX.transform.rotation);
@@ -140,7 +141,9 @@ public class Saber : MonoBehaviour
         if (other.gameObject.CompareTag("bomb"))
         {
             //blast FX
-            SoundManager.instance.audioSource.clip = SoundManager.instance.wrong;
+            GameObject fx = Instantiate(bombFX, other.transform.position, bombFX.transform.rotation);
+            Destroy(fx, 2f);
+            SoundManager.instance.audioSource.clip = SoundManager.instance.bomb;
             SoundManager.instance.audioSource.Play();
             LeftControllerVibration(strength*2, duration);
             RightControllerVibration(strength*2, duration);

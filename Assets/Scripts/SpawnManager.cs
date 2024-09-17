@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
 {
     public bool isLeft;
     public GameObject[] ballPrefab;
+    public GameObject bombPrefab;
     public float timer;
     public float spawnInterval= (60/105);
     public int spawnCount;
