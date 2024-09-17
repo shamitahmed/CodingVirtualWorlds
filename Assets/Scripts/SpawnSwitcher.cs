@@ -43,11 +43,11 @@ public class SpawnSwitcher : MonoBehaviour
         //handle situation when spawner skips a spawn
         //1. detect 2. move only 1 instead of both
 
-        if (spawnerL.skipped)
+        if (spawnerL.skipped && lastR != null)
         {
             lastR.transform.DOMoveX(-1.65f, 1f);
         }
-        else if (spawnerR.skipped)
+        else if (spawnerR.skipped && lastL != null)
         {
             lastL.transform.DOMoveX(2f, 1f);
         }
