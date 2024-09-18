@@ -176,8 +176,8 @@ public class Saber : MonoBehaviour
         SlicedHull hull = target.Slice(endSlicePoint.position, planeNormal);
         if (hull != null)
         {
-            if (isLeftSaber) crossSectionMaterial = crossSectionMaterialL;
-            else if (isRightSaber) crossSectionMaterial = crossSectionMaterialR;
+            if (target.GetComponent<BallCollision>().cubeID == 0) crossSectionMaterial = crossSectionMaterialL;
+            else if (target.GetComponent<BallCollision>().cubeID == 1) crossSectionMaterial = crossSectionMaterialR;
 
             GameObject upperHull = hull.CreateUpperHull(target, crossSectionMaterial);
             SetupSlicedComponent(upperHull);
