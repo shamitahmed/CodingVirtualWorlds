@@ -14,14 +14,18 @@ public class SoundManager : MonoBehaviour
     public AudioClip wrong;
     public AudioClip right;
     public AudioClip bomb;
+    public AudioClip hitPin;
+    public AudioClip bowling;
+    public AudioClip dropBall;
+    public AudioClip perfectStrike;
+
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         audioSource = GetComponent<AudioSource>();
-        audioSpectrum.transform.localScale = new Vector3(4,6,4);
-        Debug.Log(musicSource.clip.length);
+        if(audioSpectrum!=null) audioSpectrum.transform.localScale = new Vector3(4,6,4);
     }
 
 }

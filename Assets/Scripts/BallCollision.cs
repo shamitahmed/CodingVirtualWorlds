@@ -25,4 +25,12 @@ public class BallCollision : MonoBehaviour
             Destroy(transform.parent.gameObject);
         }
     }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("ground"))
+        {
+            SoundManager.instance.audioSource.clip = SoundManager.instance.dropBall;
+            SoundManager.instance.audioSource.Play();
+        }
+    }
 }
