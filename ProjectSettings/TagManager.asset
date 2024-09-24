@@ -11,6 +11,8 @@ TagManager:
   - saber
   - bomb
   - ground
+  - pinTop
+  - alley
   layers:
   - Default
   - TransparentFX

@@ -30,9 +30,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791405745535048471}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0.01, y: 1.38, z: 52.66}
-  m_LocalScale: {x: 60, y: 60, z: 60}
+  m_LocalScale: {x: 2047.8057, y: 601.3973, z: 24158.488}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3449299892940862702}
@@ -297,7 +297,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_ThrowVelocityScale: 1.5
+  m_ThrowVelocityScale: 2
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
