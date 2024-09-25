@@ -13,6 +13,8 @@ TagManager:
   - ground
   - pinTop
   - alley
+  - ballDestroy
+  - pin
   layers:
   - Default
   - TransparentFX

@@ -141,14 +141,6 @@ public class Saber : MonoBehaviour
             saberColliding = false;
         }
     }
-    private void OnCollisionEnter(Collision other)
-    {
-      
-    }
-    private void OnCollisionExit(Collision other)
-    {
-
-    }
 
     public void SendHaptic(XRBaseController controller, float amplitude, float duration)
     {

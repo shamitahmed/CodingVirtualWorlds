@@ -18,6 +18,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip bowling;
     public AudioClip dropBall;
     public AudioClip perfectStrike;
+    public AudioClip teleport;
+    public AudioClip footstep;
+    public GameObject footstepObject;
 
 
     // Start is called before the first frame update
@@ -27,5 +30,9 @@ public class SoundManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         if(audioSpectrum!=null) audioSpectrum.transform.localScale = new Vector3(4,6,4);
     }
-
+    public void TeleportSound()
+    {
+        audioSource.clip = teleport;
+        audioSource.Play();
+    }
 }

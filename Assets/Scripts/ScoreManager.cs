@@ -10,13 +10,15 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public int scoreCount;
     public int comboCount;
+    public int pinFallCount;
+
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
-        ResetScore();
-        ResetCombo();
+        //ResetScore();
+        //ResetCombo();
     }
     public void IncreaseScore(int score)
     {

@@ -24,6 +24,10 @@ public class BallCollision : MonoBehaviour
             ScoreManager.instance.ResetCombo();
             Destroy(transform.parent.gameObject);
         }
+        if (other.gameObject.CompareTag("ballDestroy"))
+        {
+            Destroy(gameObject);
+        }
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -31,6 +35,15 @@ public class BallCollision : MonoBehaviour
         {
             SoundManager.instance.audioSource.clip = SoundManager.instance.dropBall;
             SoundManager.instance.audioSource.Play();
+        }
+        if (other.gameObject.CompareTag("pin"))
+        {
+            GameManager.Instance.LeftControllerVibration(GameManager.Instance.strength, GameManager.Instance.duration);
+            GameManager.Instance.RightControllerVibration(GameManager.Instance.strength, GameManager.Instance.duration);
+
+            SoundManager.instance.audioSource.clip = SoundManager.instance.hitBall;
+            SoundManager.instance.audioSource.Play();
+            Destroy(gameObject, 3f);
         }
     }
 }
