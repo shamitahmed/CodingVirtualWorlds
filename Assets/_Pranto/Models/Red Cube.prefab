@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 7088464114925685075}
   - component: {fileID: 4150578706488471845}
   - component: {fileID: 6631702195851404673}
-  - component: {fileID: 3495575352059185903}
   m_Layer: 0
   m_Name: Red Cube
   m_TagString: Untagged
@@ -558,25 +557,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3495575352059185903
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4344855218378100825}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 240e5a6e4721edd4787a9047e14273c8, type: 3}
