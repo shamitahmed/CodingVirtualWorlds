@@ -15,6 +15,7 @@ TagManager:
   - alley
   - ballDestroy
   - pin
+  - hand
   layers:
   - Default
   - TransparentFX
