@@ -18,6 +18,8 @@ public class GameManagerEscape : MonoBehaviour
     void Start()
     {
         Instance = this;
+
+        GameManagerEscape.Instance.lampLight.SetActive(false);
     }
 
     public void SendHaptic(XRBaseController controller, float amplitude, float duration)

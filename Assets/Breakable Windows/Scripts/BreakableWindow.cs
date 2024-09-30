@@ -59,7 +59,7 @@ public class BreakableWindow : MonoBehaviour {
         if (transform.rotation.eulerAngles.x != 0 || transform.rotation.eulerAngles.z != 0)
             Debug.LogWarning("Warning: Window must not be rotated around x and z!");
 
-        Invoke("breakWindow", 2f);
+        //Invoke("breakWindow", 2f);
        
     }
 
