@@ -16,6 +16,7 @@ TagManager:
   - ballDestroy
   - pin
   - hand
+  - wall
   layers:
   - Default
   - TransparentFX
