@@ -13,7 +13,11 @@ public class HandButton : MonoBehaviour
     {
         
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+       
 
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("hand"))
@@ -27,7 +31,7 @@ public class HandButton : MonoBehaviour
             else
                 transform.DOMoveY(transform.position.y + 0.1f, 0.2f);
 
-            if(buttonID == 0)
+            if (buttonID == 0)
             {
                 if (isPressed)
                     GameManagerEscape.Instance.lampLight.SetActive(true);

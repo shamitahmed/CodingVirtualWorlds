@@ -159,7 +159,7 @@ public class BreakableWindow : MonoBehaviour {
         
         Rigidbody rigid = obj.AddComponent<Rigidbody>();
         rigid.centerOfMass = (v[0] + v[1] + v[2]) / 3f;
-        if (addTorques && preCalculate == false) rigid.AddTorque(new Vector3(Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50));
+        //if (addTorques && preCalculate == false) rigid.AddTorque(new Vector3(Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50));
         if (destroyPhysicsTime > 0) Destroy(rigid, destroyPhysicsTime);
 
         MeshRenderer mr = obj.AddComponent<MeshRenderer>();
@@ -239,18 +239,20 @@ public class BreakableWindow : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (useCollision == true)
+        if (useCollision == true && col.gameObject.CompareTag("rat"))
         {
-            if (health > 0)
-            {
-                health -= col.impulse.magnitude;
-                if (health < 0)
-                {
-                    health = 0;
-                    breakWindow();
-                }
-            }
-            else breakWindow();
+            GetComponent<BreakableWindow>().breakWindow();
+
+            //if (health > 0)
+            //{
+            //    health -= col.impulse.magnitude;
+            //    if (health < 0)
+            //    {
+            //        health = 0;
+            //        breakWindow();
+            //    }
+            //}
+            //else breakWindow();
         }        
     }
 }

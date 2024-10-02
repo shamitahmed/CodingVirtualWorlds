@@ -17,6 +17,8 @@ TagManager:
   - pin
   - hand
   - wall
+  - rat
+  - Win
   layers:
   - Default
   - TransparentFX
@@ -27,10 +29,10 @@ TagManager:
   - Cube
   - Sliceable
   - GrabIgnoreRay
-  - 
-  - 
-  - 
-  - 
+  - Door
+  - Rat
+  - TP
+  - Floor
   - 
   - 
   - 

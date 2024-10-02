@@ -8,6 +8,9 @@ public class GameManagerEscape : MonoBehaviour
     public static GameManagerEscape Instance;
     [Header("escape room")]
     public GameObject lampLight;
+    public GameObject roof;
+    public GameObject waterFallObject;
+
 
     [Header("haptic")]
     [SerializeField] private XRBaseController leftController;
@@ -19,7 +22,8 @@ public class GameManagerEscape : MonoBehaviour
     {
         Instance = this;
 
-        GameManagerEscape.Instance.lampLight.SetActive(false);
+        roof.SetActive(true);
+        lampLight.SetActive(false);
     }
 
     public void SendHaptic(XRBaseController controller, float amplitude, float duration)
