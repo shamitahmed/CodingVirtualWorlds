@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
+
 
 public class GameManagerEscape : MonoBehaviour
 {
@@ -10,7 +12,12 @@ public class GameManagerEscape : MonoBehaviour
     public GameObject lampLight;
     public GameObject roof;
     public GameObject waterFallObject;
-
+    public GameObject waterLevel;
+    public bool win;
+    public bool lose;
+    public int candleCount;
+    public GameObject window;
+    public bool windowBroken;
 
     [Header("haptic")]
     [SerializeField] private XRBaseController leftController;
@@ -43,5 +50,11 @@ public class GameManagerEscape : MonoBehaviour
     {
         SendHaptic(rightController, amp, dur);
 
+    }
+
+    public IEnumerator Restart()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

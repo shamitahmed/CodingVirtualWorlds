@@ -8,6 +8,7 @@ public class SoundManagerEscape : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource musicSource;
     public GameObject audioSpectrum;
+    public GameObject waterfall;
     public AudioClip openDrawer;
     public AudioClip breakMirror;
     public AudioClip lightSwitch;
@@ -16,6 +17,7 @@ public class SoundManagerEscape : MonoBehaviour
     public AudioClip teleport;
     public AudioClip footstep;
     public AudioClip dropObject;
+    public AudioClip candleLit;
 
     // Start is called before the first frame update
     void Start()

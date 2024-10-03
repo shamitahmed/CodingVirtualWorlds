@@ -19,6 +19,8 @@ TagManager:
   - wall
   - rat
   - Win
+  - Flame
+  - Lighter
   layers:
   - Default
   - TransparentFX
@@ -33,9 +35,9 @@ TagManager:
   - Rat
   - TP
   - Floor
-  - 
-  - 
-  - 
+  - HandT
+  - HandC
+  - Switch
   - 
   - 
   - 

@@ -7,6 +7,7 @@ using UnityEngine.XR;
 using DG.Tweening;
 public class UIManagerEscape : MonoBehaviour
 {
+    public static UIManagerEscape instance;
     public Slider volumeSlider;
     public Toggle musicToggle;
     public GameObject winPanel;
@@ -15,6 +16,8 @@ public class UIManagerEscape : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
+        
         musicToggle.onValueChanged.AddListener(delegate
         {
             MusicToggle(musicToggle);

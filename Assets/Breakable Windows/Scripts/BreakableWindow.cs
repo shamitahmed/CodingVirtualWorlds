@@ -62,7 +62,16 @@ public class BreakableWindow : MonoBehaviour {
         //Invoke("breakWindow", 2f);
        
     }
-
+    private void FixedUpdate()
+    {
+        if(GameManagerEscape.Instance.candleCount >= 3 && !GameManagerEscape.Instance.windowBroken)
+        {
+            SoundManagerEscape.instance.audioSource.clip = SoundManagerEscape.instance.breakMirror;
+            SoundManagerEscape.instance.audioSource.Play();
+            Invoke("breakWindow", 2f);
+            GameManagerEscape.Instance.windowBroken = true;
+        }
+    }
     private void bakeVertices(bool trianglesToo = false)
     {
         vertices = new Vector3[(partsX + 1) * (partsY + 1)];
@@ -209,7 +218,7 @@ public class BreakableWindow : MonoBehaviour {
                 {
                     for (int i = 0; i < splinters.Count; i++)
                     {
-                        splinters[i].GetComponent<Rigidbody>().AddTorque(new Vector3(Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50));
+                        //splinters[i].GetComponent<Rigidbody>().AddTorque(new Vector3(Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50, Random.value > 0.5f ? Random.value * 50 : -Random.value * 50));
                     }
                 }
             }
@@ -237,22 +246,22 @@ public class BreakableWindow : MonoBehaviour {
     }
 
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (useCollision == true && col.gameObject.CompareTag("rat"))
-        {
-            GetComponent<BreakableWindow>().breakWindow();
+    //void OnCollisionEnter(Collision col)
+    //{
+    //    if (useCollision == true && col.gameObject.CompareTag("rat"))
+    //    {
+    //        GetComponent<BreakableWindow>().breakWindow();
 
-            //if (health > 0)
-            //{
-            //    health -= col.impulse.magnitude;
-            //    if (health < 0)
-            //    {
-            //        health = 0;
-            //        breakWindow();
-            //    }
-            //}
-            //else breakWindow();
-        }        
-    }
+    //        //if (health > 0)
+    //        //{
+    //        //    health -= col.impulse.magnitude;
+    //        //    if (health < 0)
+    //        //    {
+    //        //        health = 0;
+    //        //        breakWindow();
+    //        //    }
+    //        //}
+    //        //else breakWindow();
+    //    }        
+    //}
 }

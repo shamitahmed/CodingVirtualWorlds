@@ -38,6 +38,16 @@ public class HandButton : MonoBehaviour
                 else
                     GameManagerEscape.Instance.lampLight.SetActive(false);
             }
+
+            SoundManagerEscape.instance.waterfall.SetActive(true);
+            GameManagerEscape.Instance.waterLevel.SetActive(true);
+            GameManagerEscape.Instance.waterFallObject.SetActive(true);
+            GameManagerEscape.Instance.waterLevel.transform.DOMoveY(1, 150).OnComplete(()=>
+            {
+                UIManagerEscape.instance.losePanel.SetActive(true);
+                GameManagerEscape.Instance.lose = true;
+                StartCoroutine(GameManagerEscape.Instance.Restart());
+            });
         }
     }
 }
