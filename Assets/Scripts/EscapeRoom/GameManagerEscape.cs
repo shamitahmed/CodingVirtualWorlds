@@ -17,6 +17,7 @@ public class GameManagerEscape : MonoBehaviour
     public bool lose;
     public int candleCount;
     public GameObject window;
+    public GameObject windowParts;
     public bool windowBroken;
 
     [Header("haptic")]

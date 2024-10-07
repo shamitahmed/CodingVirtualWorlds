@@ -233,6 +233,9 @@ public class BreakableWindow : MonoBehaviour {
             Destroy(GetComponent<MeshRenderer>());
             Destroy(GetComponent<MeshFilter>());
 
+            GameManagerEscape.Instance.windowParts.SetActive(true);
+            Destroy(GameManagerEscape.Instance.windowParts, 5f);
+
             isBroken = true;            
         }
 
