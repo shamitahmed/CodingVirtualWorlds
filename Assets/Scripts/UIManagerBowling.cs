@@ -11,12 +11,29 @@ using UnityEngine.SocialPlatforms.Impl;
 public class UIManagerBowling : MonoBehaviour
 {
     public static UIManagerBowling Instance;
+    public Slider volumeSlider;
+    public Toggle musicToggle;
     public TextMeshProUGUI txtScore;
     public TextMeshProUGUI txtStrike;
+
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
+
+        musicToggle.onValueChanged.AddListener(delegate
+        {
+            MusicToggle(musicToggle);
+        });
+
+        volumeSlider.onValueChanged.AddListener((v) =>
+        {
+            SoundManager.instance.musicSource.volume = v;
+        });
+    }
+    public void MusicToggle(Toggle tglValue)
+    {
+        SoundManager.instance.musicSource.enabled = tglValue.isOn;
     }
     public void ScoreIncrease(int score)
     {
