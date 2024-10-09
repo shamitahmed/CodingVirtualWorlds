@@ -6,9 +6,10 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public Transform pinSpawnPos;
+    public Transform[] pinSpawnPos;
     public GameObject pinPrefab;
-    public GameObject pinObject;
+    public GameObject[] pinObjectAlleys;
+    public Material pinDedMat;
     [Header("haptic")]
     [SerializeField] private XRBaseController leftController;
     [SerializeField] private XRBaseController rightController;
@@ -19,13 +20,19 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-    public void SpawnPins()
+    public void SpawnPins(int alleyID)
     {
         LeftControllerVibration(strength * 2, duration);
         RightControllerVibration(strength * 2, duration);
 
-        GameObject go = Instantiate(pinPrefab, pinPrefab.transform.position, pinPrefab.transform.rotation);
-        pinObject = go;
+        GameObject go = Instantiate(pinPrefab, pinSpawnPos[alleyID].transform.position, pinPrefab.transform.rotation);
+        pinObjectAlleys[alleyID] = go;
+
+        //assign alley ID to spawned pins
+        for (int i = 0; i < 10; i++)
+        {
+            go.transform.GetChild(i).GetChild(0).GetComponent<PinCollision>().alleyID = alleyID;
+        }
 
         SoundManager.instance.audioSource.clip = SoundManager.instance.perfectStrike;
         SoundManager.instance.audioSource.Play();

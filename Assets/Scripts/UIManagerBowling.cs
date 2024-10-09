@@ -55,7 +55,7 @@ public class UIManagerBowling : MonoBehaviour
     public void ScoreIncrease(int score)
     {
         txtScore.gameObject.SetActive(true);
-        if (ScoreManager.instance.pinFallCount < 10)
+        if (ScoreManager.instance.pinFallCountAlley1 < 10 && ScoreManager.instance.pinFallCountAlley2 < 10 && ScoreManager.instance.pinFallCountAlley3 < 10)
             txtStrike.gameObject.SetActive(false);
         ScoreManager.instance.scoreCount += score;
         txtScore.text = ScoreManager.instance.scoreCount.ToString();

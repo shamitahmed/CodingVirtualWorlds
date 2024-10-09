@@ -10,7 +10,9 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public int scoreCount;
     public int comboCount;
-    public int pinFallCount;
+    public int pinFallCountAlley1;
+    public int pinFallCountAlley2;
+    public int pinFallCountAlley3;
 
 
     // Start is called before the first frame update
