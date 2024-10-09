@@ -49,6 +49,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4818743763744115121}
     m_Modifications:
+    - target: {fileID: 55215661714048996, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 915d6f9a9d6923b4ab4d48cb4bd7ad7f, type: 2}
+    - target: {fileID: 1138771271635692474, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: scoreToGive
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3677949945039118866, guid: 6ec2569ac14023b4080acb6c41a1a388,
         type: 3}
       propertyPath: m_Name
@@ -133,6 +143,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4818743763744115121}
     m_Modifications:
+    - target: {fileID: 55215661714048996, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc910f0c68d156349ba5cf8b8bc5c51b, type: 2}
+    - target: {fileID: 1138771271635692474, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: scoreToGive
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3677949945039118866, guid: 6ec2569ac14023b4080acb6c41a1a388,
         type: 3}
       propertyPath: m_Name
@@ -217,6 +237,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4818743763744115121}
     m_Modifications:
+    - target: {fileID: 55215661714048996, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 915d6f9a9d6923b4ab4d48cb4bd7ad7f, type: 2}
+    - target: {fileID: 1138771271635692474, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: scoreToGive
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3677949945039118866, guid: 6ec2569ac14023b4080acb6c41a1a388,
         type: 3}
       propertyPath: m_Name
@@ -301,6 +331,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4818743763744115121}
     m_Modifications:
+    - target: {fileID: 55215661714048996, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc910f0c68d156349ba5cf8b8bc5c51b, type: 2}
+    - target: {fileID: 1138771271635692474, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: scoreToGive
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3677949945039118866, guid: 6ec2569ac14023b4080acb6c41a1a388,
         type: 3}
       propertyPath: m_Name
@@ -627,6 +667,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4818743763744115121}
     m_Modifications:
+    - target: {fileID: 55215661714048996, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc910f0c68d156349ba5cf8b8bc5c51b, type: 2}
+    - target: {fileID: 1138771271635692474, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: scoreToGive
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3677949945039118866, guid: 6ec2569ac14023b4080acb6c41a1a388,
         type: 3}
       propertyPath: m_Name
@@ -795,6 +845,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4818743763744115121}
     m_Modifications:
+    - target: {fileID: 55215661714048996, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 915d6f9a9d6923b4ab4d48cb4bd7ad7f, type: 2}
+    - target: {fileID: 1138771271635692474, guid: 6ec2569ac14023b4080acb6c41a1a388,
+        type: 3}
+      propertyPath: scoreToGive
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3677949945039118866, guid: 6ec2569ac14023b4080acb6c41a1a388,
         type: 3}
       propertyPath: m_Name

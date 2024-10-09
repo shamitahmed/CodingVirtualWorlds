@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 0
+  scoreToGive: 10
 --- !u!1 &3677949945039118866
 GameObject:
   m_ObjectHideFlags: 0

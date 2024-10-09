@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Bungee-Regular SDF
+  m_Name: Bungee-Regular SDF 1
   m_EditorClassIdentifier: 
-  hashCode: -1033442216
+  hashCode: -137140663
   material: {fileID: -7834293406483943445}
-  materialHashCode: 246761848
+  materialHashCode: -1766195511
   m_Version: 1.1.0
   m_SourceFontFileGUID: 37248b63ef790ac44ba8eac17547c608
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 37248b63ef790ac44ba8eac17547c608,

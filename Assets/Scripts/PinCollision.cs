@@ -5,6 +5,7 @@ using UnityEngine;
 public class PinCollision : MonoBehaviour
 {
     public bool hit;
+    public int scoreToGive = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,7 @@ public class PinCollision : MonoBehaviour
                 GameManager.Instance.SpawnPins();
             }
 
-            UIManagerBowling.Instance.ScoreIncrease(10);
+            UIManagerBowling.Instance.ScoreIncrease(scoreToGive);
             SoundManager.instance.audioSource.clip = SoundManager.instance.dropBall;
             SoundManager.instance.audioSource.Play();
         }

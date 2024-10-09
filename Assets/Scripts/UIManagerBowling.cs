@@ -15,6 +15,16 @@ public class UIManagerBowling : MonoBehaviour
     public Toggle musicToggle;
     public TextMeshProUGUI txtScore;
     public TextMeshProUGUI txtStrike;
+    public Button btnOpenTut;
+    public Button btnCloseTut;
+    public GameObject tutObject;
+    [Header("Store")]
+    public Button btnHat1;
+    public Button btnHat2;
+    public Button btnHat3;
+    public GameObject hat1;
+    public GameObject hat2;
+    public GameObject hat3;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +40,13 @@ public class UIManagerBowling : MonoBehaviour
         {
             SoundManager.instance.musicSource.volume = v;
         });
+
+        btnCloseTut.onClick.AddListener(()  =>  CloseTut());
+        btnOpenTut.onClick.AddListener(() => OpenTut());
+
+        btnHat1.onClick.AddListener(() => Hat1());
+        btnHat2.onClick.AddListener(() => Hat2());
+        btnHat3.onClick.AddListener(() => Hat3());
     }
     public void MusicToggle(Toggle tglValue)
     {
@@ -53,5 +70,35 @@ public class UIManagerBowling : MonoBehaviour
 
         txtScore.gameObject.SetActive(true);
         txtStrike.gameObject.SetActive(false);
+    }
+    public void CloseTut()
+    {
+        tutObject.SetActive(false);
+        btnCloseTut.gameObject.SetActive(false);
+        btnOpenTut.gameObject.SetActive(true);
+    }
+    public void OpenTut()
+    {
+        tutObject.SetActive(true);
+        btnCloseTut.gameObject.SetActive(true);
+        btnOpenTut.gameObject.SetActive(false);
+    }
+    public void Hat1()
+    {
+        hat1.SetActive(true);
+        hat2.SetActive(false);
+        hat3.SetActive(false);
+    }
+    public void Hat2()
+    {
+        hat1.SetActive(false);
+        hat2.SetActive(true);
+        hat3.SetActive(false);
+    }
+    public void Hat3()
+    {
+        hat1.SetActive(false);
+        hat2.SetActive(false);
+        hat3.SetActive(true);
     }
 }
